@@ -24,7 +24,7 @@ Create the conda environment "unetgan" from the provided unetgan.yml file. The e
 |--consistency_loss | Compute only the CutMix consistency loss, but not the CutMix augmentation loss  (Can increase stability but might perform worse). |
 |--consistency_loss_and_augmentation | Compute both CutMix augmentation and consistency loss.|
 |--base_root | Specify the path/to/folder_for_results where all experimental results are saved. |
-|--data_folder | Specify the path to the dataset /path/to/dataset. For FFHQ, this folder contains the 69 subfolders that can be downloaded here https://drive.google.com/drive/folders/1tZUcXDBeOibC6jcMCtgRRz67pzrAHeHL. In our case, the images were downscaled before training to resolution 256x256. For CelebA, the folder should contain all images with their 6-digit number as file name (e.g. 016685.png) |
+|--data_folder | Specify the path to the dataset /path/to/dataset. For FFHQ, this folder contains the 69 subfolders that can be downloaded [here](https://drive.google.com/drive/folders/1tZUcXDBeOibC6jcMCtgRRz67pzrAHeHL). In our case, the images were downscaled before training to resolution 256x256. For CelebA, the folder should contain all images with their 6-digit number as file name (e.g. 016685.png) |
 
 
 ## Details
