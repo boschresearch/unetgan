@@ -16,16 +16,16 @@ Create the conda environment "unetgan" from the provided unetgan.yml file. The e
 
 
 |Argument|Explanation|
-|------|---|
-|```--unconditional``` | Use this if the dataset does not have classes (e.g. CelebA).|
-|```--unet_mixup``` | Use CutMix. |
-|```--slow_mixup``` | Use warmup for the CutMix-augmentation loss.|
-|```--slow_mixup_epochs``` | Number of epochs for the warmup |
-|```--full_batch_mixup``` | If True, a coin is tossed at every training step. With a certain probability the whole batch is mixed and the CutMix augmentation loss and consistency_loss is the only loss that is computed for this batch. The probability increases from 0 to 0.5 over the course of the specified warmup epochs. If False, the CutMix augmentation and consistency loss are computed for every batch and added to the default GAN loss. In the case of a warmup, the augmentation loss is multiplied with a factor that increases from 0 to 1 over the course of the specified warmup epochs.|
-|```--consistency_loss``` | Compute only the CutMix consistency loss, but not the CutMix augmentation loss  (Can increase stability but might perform worse). |
-|<nobr>```--consistency_loss_and_augmentation```</nobr> | Compute both CutMix augmentation and consistency loss.|
-|```--base_root``` | Specify the path/to/folder_for_results where all experimental results are saved. |
-|```--data_folder``` | Specify the path to the dataset /path/to/dataset. For FFHQ, this folder contains the 69 subfolders that can be downloaded [here](https://drive.google.com/drive/folders/1tZUcXDBeOibC6jcMCtgRRz67pzrAHeHL). In our case, the images were downscaled before training to resolution 256x256. For CelebA, the folder should contain all images with their 6-digit number as file name (e.g. 016685.png) |
+|----------------------------------------- |-------------------------------------------------------------|
+|```--unconditional```                     | Use this if the dataset does not have classes <br />(e.g. CelebA).|
+|```--unet_mixup```                        | Use CutMix.                                                 |
+|```--slow_mixup```                        | Use warmup for the CutMix-augmentation loss.                |
+|```--slow_mixup_epochs```                 | Number of epochs for the warmup                             |
+|```--full_batch_mixup```                  | If True, a coin is tossed at every training step. <br />  With a certain probability the whole batch is mixed <br /> and the CutMix augmentation loss and consistency loss <br /> is the only loss that is computed for this batch. The <br /> probability increases from 0  to 0.5 over the course <br />  of the specified warmup epochs. If False, the CutMix <br /> augmentation and consistency loss are  computed for  <br /> every batch and added to the default GAN loss. In the <br /> case of a warmup, the augmentation loss is multiplied <br /> with a factor that increases from 0 to 1 over the course <br /> of  the specified warmup epochs.|
+|```--consistency_loss```                  | Compute only the CutMix consistency loss, but not the <br /> CutMix augmentation loss  (Can increase stability but<br /> might perform worse). |
+|```--consistency_loss_and_augmentation```  | Compute both CutMix augmentation and consistency <br />loss.|
+|```--base_root```                         | Specify the path/to/folder_for_results where all <br />experimental results are saved. |
+|```--data_folder```                       | Specify the path to the dataset /path/to/dataset. For FFHQ, <br />this folder contains the 69 subfolders that can be <br />downloaded [here](https://drive.google.com/drive/folders/1tZUcXDBeOibC6jcMCtgRRz67pzrAHeHL). In our case, the images were <br />downscaled before training to resolution 256x256. <br />For CelebA, the folder should contain all images with their <br />6-digit number as file name (e.g. 016685.png) |
 
 
 ## Details
