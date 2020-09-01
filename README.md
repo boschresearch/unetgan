@@ -14,8 +14,16 @@ above paper when reporting, reproducing or extending the results.
 
 Create the conda environment "unetgan" from the provided unetgan.yml file. The experiments can be reproduced with the scripts provided in the folder training_scripts (the experiment folder and dataset folder has to be set manually).
 
+<style>
+table th:first-of-type {
+    width: 10%;
+}
+table th:nth-of-type(2) {
+    width: 10%;
+}
+</style>
 |Argument|Explanation|
-|---|---|
+|------|---|
 |--unconditional | Use this if the dataset does not have classes (e.g. CelebA).|
 |--unet_mixup | Use CutMix. |
 |--slow_mixup | Use warmup for the CutMix-augmentation loss.|
