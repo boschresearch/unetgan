@@ -34,7 +34,7 @@ This implementation of U-Net GAN is based on the PyTorch code for BigGAN (https:
 
 ## Metrics
 
-The inception metrics (FID and IS) are measured in the same way as in the parent repository (https://github.com/ajbrock/BigGAN-PyTorch). They can be computed on-the-fly during training, using the precomputed inception moments (see original BigGAN repository). We included the pre-computed inception moments for CelebA and FFHQ in this repository for convenience. This means when the model trains it will automatically read the npz files in the main folder and calculate the FID.  
+The inception metrics (FID and IS) are measured in the same way as in the parent repository (https://github.com/ajbrock/BigGAN-PyTorch). They can be computed on-the-fly during training, using the pre-computed inception moments (see original BigGAN repository). We included the pre-computed inception moments for CelebA and FFHQ in this repository for convenience. This means when the model trains it will automatically read the npz files in the main folder and calculate the FID.  
 
 
 ## Citation
