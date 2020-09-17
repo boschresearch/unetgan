@@ -1,7 +1,7 @@
 # U-Net GAN PyTorch
 
 <p align="center">
-<img src="teaser_final.png">
+<img src="overview.png" width="500">
 </p>
 
 PyTorch implementation of the CVPR 2020 paper "A U-Net Based Discriminator for Generative Adversarial Networks". The paper can
