@@ -30,7 +30,13 @@ Create the conda environment "unetgan" from the provided unetgan.yml file. The e
 
 ## Details
 
-This implementation of U-Net GAN is based on the PyTorch code for BigGAN (https://github.com/ajbrock/BigGAN-PyTorch). The main differences are that (1) we use our own data-loader which does not require HDF5 pre-processing, (2) applied changes in the generator and discriminator class in BigGAN.py, and (3) modified train.py and train_fns.py.
+This implementation of U-Net GAN is based on the PyTorch code for BigGAN (https://github.com/ajbrock/BigGAN-PyTorch). The main differences are that (1) we use our own data-loader which does not require HDF5 pre-processing, (2) applied changes in the generator and discriminator class in BigGAN.py, and (3) modified train.py and train_fns.py. If you want to turn your own GAN into a U-Net GAN, make sure to follow the tips outlined in [how_to_unetgan.pdf](https://github.com/boschresearch/unetgan/blob/master/how_to_unetgan.pdf).
+
+## Graphical Overview of the U-Net Discriminator Architecture
+
+<p align="center">
+<img src="unet_discriminator.png" width="800">
+</p>
 
 ## Metrics
 
