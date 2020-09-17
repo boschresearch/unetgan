@@ -19,4 +19,4 @@ python train.py \
 --unconditional --warmup_epochs 20 \
 --unet_mixup --consistency_loss_and_augmentation \
 --base_root path/to/folder_for_results \
---data_folder /path/to//img_align_celeba_png
+--data_folder /path/to/img_align_celeba_png

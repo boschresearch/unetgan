@@ -4,9 +4,8 @@
 <img src="overview.png" width="500">
 </p>
 
-PyTorch implementation of the CVPR 2020 paper "A U-Net Based Discriminator for Generative Adversarial Networks". The paper can
-be found [here](https://openaccess.thecvf.com/content_CVPR_2020/html/Schonfeld_A_U-Net_Based_Discriminator_for_Generative_Adversarial_Networks_CVPR_2020_paper.html). The code allows the users to
-reproduce and extend the results reported in the study.Please cite the
+PyTorch implementation of the CVPR 2020 paper "A U-Net Based Discriminator for Generative Adversarial Networks". The paper and supplementary can
+be found [here](https://openaccess.thecvf.com/content_CVPR_2020/html/Schonfeld_A_U-Net_Based_Discriminator_for_Generative_Adversarial_Networks_CVPR_2020_paper.html). Don't forget to have a look at the supplementary as well (the Tensorflow FIDs can be found there (Table S1)). The code allows the users to reproduce and extend the results reported in the study. Please cite the
 above paper when reporting, reproducing or extending the results.
 
 
@@ -40,8 +39,15 @@ This implementation of U-Net GAN is based on the PyTorch code for BigGAN (https:
 
 ## Metrics
 
-The inception metrics (FID and IS) are measured in the same way as in the parent repository (https://github.com/ajbrock/BigGAN-PyTorch). They can be computed on-the-fly during training, using the pre-computed inception moments (see original BigGAN repository). We included the pre-computed inception moments for CelebA and FFHQ in this repository for convenience. This means when the model trains it will automatically read the npz files in the main folder and calculate the FID.  
+The inception metrics (FID and IS) are measured in the same way as in the parent repository (https://github.com/ajbrock/BigGAN-PyTorch). They can be computed on-the-fly during training, using the pre-computed inception moments (see original BigGAN repository). We included the pre-computed inception moments for CelebA and FFHQ in this repository for convenience. This means when the model trains it will automatically read the npz files in the main folder and calculate the FID. The on-the-fly FID scores are saved in the ```logs``` folder in the output directory as a pickle named ```inception_metrics_<experiment_name>.p```. Note that for CelebA training is perfectly stable, but for FFHQ we observe frequent collapse (which is also the case for the underlying BigGAN, which is unstable for FFHQ). The FID curve for a successful FFHQ run will look like the one on the left, while the more common failed runs will look like the curve on the right.
 
+<p align="center">
+<img src="fid_curves.png" width="800">
+</p>
+
+## Pretrained Model
+
+To load the pre-trained model for FFHQ, execute ```sh training_scripts/load_pretrained_ffhq.sh```. The script will load the checkpoint and resume training from this point. Of course, you still need to set the path to the dataset and the desired output folder in this script. If you quickly want to check the outputs of the pre-trained model, set te ```--sample_every``` to a small number of training steps, like 30.
 
 ## Citation
 If you use this work please cite
@@ -60,7 +66,7 @@ If you use this work please cite
 U-Net GAN PyTorch is open-sourced under the AGPL-3.0 license. See the
 [LICENSE](LICENSE) file for details.
 
-For a list of other open source components included in PROJECT-NAME, see the
+For a list of other open source components included in unetgan, see the
 file [3rd-party-licenses.txt](3rd-party-licenses.txt).
 
 ## Purpose of the project

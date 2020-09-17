@@ -1,3 +1,4 @@
+cd ..
 python train.py \
 --dataset FFHQ --parallel --shuffle   \
 --which_best FID \
@@ -18,4 +19,5 @@ python train.py \
 --id ffhq_unet_bce_noatt_cutmix_consist --gpus "0,1" --unconditional \
 --unet_mixup --slow_mixup --full_batch_mixup --consistency_loss_and_augmentation --warmup_epochs 100 \
 --base_root path/to/folder_for_results \
---data_folder /path/to/images256x256
+--data_folder /path/to/images256x256 \
+--resume --resume_from pretrained_model --epoch_id ep_82
