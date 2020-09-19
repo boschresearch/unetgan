@@ -37,12 +37,15 @@ This implementation of U-Net GAN is based on the PyTorch code for BigGAN (https:
 <img src="unet_discriminator.png" width="800">
 </p>
 
+## Video Summary
+[![video summary](youtube.png)](https://www.youtube.com/watch?v=BR9C4p3W9vw)
+
 ## Metrics
 
-The inception metrics (FID and IS) are measured in the same way as in the parent repository (https://github.com/ajbrock/BigGAN-PyTorch). They can be computed on-the-fly during training, using the pre-computed inception moments (see original BigGAN repository). We included the pre-computed inception moments for CelebA and FFHQ in this repository for convenience. This means when the model trains it will automatically read the npz files in the main folder and calculate the FID. The on-the-fly FID scores are saved in the ```logs``` folder in the output directory as a pickle named ```inception_metrics_<experiment_name>.p```. Note that for CelebA training is perfectly stable, but for FFHQ we observe frequent collapse (which is also the case for the underlying BigGAN, which is unstable for FFHQ). The FID curve for a successful FFHQ run will look like the one on the left, while the more common failed runs will look like the curve on the right.
+The inception metrics (FID and IS) are measured in the same way as in the parent repository (https://github.com/ajbrock/BigGAN-PyTorch). They can be computed on-the-fly during training, using the pre-computed inception moments (see original BigGAN repository). We included the pre-computed inception moments for CelebA and FFHQ in this repository for convenience. This means when the model trains it will automatically read the npz files in the main folder and calculate the FID. The on-the-fly FID scores are saved in the ```logs``` folder in the output directory as a pickle named ```inception_metrics_<experiment_name>.p```. Note that for CelebA training is perfectly stable, but for FFHQ we observe frequent collapse (which is also the case for the underlying BigGAN, which is unstable for FFHQ). The FID curve for a successful FFHQ run will look like the one on the left, while the more common failed runs will look like the curve on the right. The collapse occurs early in training and is easily detectable (in contrast, for BigGAN it usually occurs later).
 
 <p align="center">
-<img src="fid_curves.png" width="800">
+<img src="fid_curves_.png" width="800">
 </p>
 
 ## Pretrained Model
@@ -74,3 +77,6 @@ file [3rd-party-licenses.txt](3rd-party-licenses.txt).
 This software is a research prototype, solely developed for and published as
 part of the publication. It will neither be
 maintained nor monitored in any way.
+
+## Contact
+If you have questions or need help, feel free to write an email to edgarschoenfeld@live.de.
