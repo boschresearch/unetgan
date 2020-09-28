@@ -49,7 +49,7 @@ The inception metrics (FID and IS) are measured in the same way as in the parent
 </p>
 
 ## Pretrained Model
-
+First, download the checkpoint for FFHQ from https://www.dropbox.com/sh/7vql1ao1u853wwf/AAABs7JO27da49_GveaEXl4Ma?dl=0 and copy the files into the folder ```pretrained_model```.
 To load the pre-trained model for FFHQ, execute ```sh training_scripts/load_pretrained_ffhq.sh```. The script will load the checkpoint and resume training from this point. Of course, you still need to set the path to the dataset and the desired output folder in this script. If you quickly want to check the outputs of the pre-trained model, set te ```--sample_every``` to a small number of training steps, like 30.
 
 ## Citation
