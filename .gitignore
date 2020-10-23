@@ -2,3 +2,9 @@ orig_inception_moments/
 __pycache__
 logs/
 
+pretrained_model/G_ema_ep_82.pth
+pretrained_model/G_optim_ep_82.pth
+pretrained_model/G_ep_82.pth
+pretrained_model/D_ep_82.pth
+pretrained_model/state_dict_ep_82.pth
+pretrained_model/D_optim_ep_82.pth
